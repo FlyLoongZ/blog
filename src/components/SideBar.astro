@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import avatarImg from "../images/avatar.jpg";
+---
+
+<div class="about">
+    <Image src={avatarImg} alt="图片" />
+    <p>FlyLoongZ</p>
+</div>
+
+<style>
+    .about {
+        padding: 1rem;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0,2,4,.06);
+    }
+
+    .about img {
+        display: block;
+        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+        margin: auto;
+    }
+
+    .about p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+</style>
