@@ -5,6 +5,7 @@ pubDate: 2025-09-02
 description: '我的SukiSU Ultra内核编译记录'
 author: 'FlyLoongZ'
 tags: ["Android", "Kernel", "KernelSU"]
+cover: /src/pages/posts/images/sukisu-ultra-logo.svg
 ---
 - 编译的内核使用在`Redmi Note 12 Tubro`上，仅供参考
   
