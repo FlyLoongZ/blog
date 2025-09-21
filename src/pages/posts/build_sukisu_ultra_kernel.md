@@ -7,7 +7,7 @@ author: 'FlyLoongZ'
 tags: ["Android", "Kernel", "KernelSU"]
 cover: /src/pages/posts/images/sukisu-ultra-logo.svg
 ---
-- 编译的内核使用在`Redmi Note 12 Tubro`上，仅供参考
+> 编译的内核使用在`Redmi Note 12 Tubro`上，仅供参考
   
 ## 目录
 - [目录](#目录)

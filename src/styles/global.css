@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -7,17 +10,8 @@ body {
   margin: 0 auto;
 }
 
-#main {
-  display: flex;
-}
-
 #sidebar {
   position: sticky;
   min-width: 16%;
   margin: 2rem;
-}
-
-#post-page {
-  margin: 2rem 0;
-  padding: 0 1rem;
 }

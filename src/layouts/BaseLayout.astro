@@ -16,12 +16,12 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <div id="main">
-      <div id="sidebar">
+    <div class="main flex flex-wrap justify-center">
+      <div class="sidebar m-1 p-3">
         <SideBar />
       </div>
-      <div id="post-page">
-        <slot><p>test</p></slot>
+      <div class="post-page m-1 p-3 max-w-full lg:max-w-5xl text-wrap overflow-hidden">
+        <slot />
       </div>
     </div>
     <Footer />

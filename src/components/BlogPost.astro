@@ -11,21 +11,15 @@ const { title, url, description, cover} = Astro.props;
 const images = import.meta.glob<{default: ImageMetadata}>('/src/pages/posts/images/*.*')
 ---
     
-<div class="blogpost"> 
-    <Image src={images[cover]()} alt="blog post image"/>
-    <h1>{title}</h1>
-    <p>{description}</p>
+<div class="blog-post flex flex-col my-5 bg-white rounded-xl"> 
+    <Image class="rounded-t-xl h-50 object-cover m-auto" src={images[cover]()} alt="blog post image"/>
+    <h1 class="text-xl font-bold p-3 m-1">{title}</h1>
+    <p class="p-3 m-2">{description}</p>
     <a href={url}></a>
 </div>
 
-<style>
-    img {
-        height: 100px;
-    }
-</style>
-
 <script>
-    const blogpost = document.querySelectorAll('div.blogpost');
+    const blogpost = document.querySelectorAll('div.blog-post');
     blogpost.forEach((blogpost) => {
         const url = blogpost.querySelector('a')?.getAttribute('href') || "./";
         blogpost.addEventListener('click', () => {

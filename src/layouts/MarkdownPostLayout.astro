@@ -4,41 +4,21 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
+  <h1 class="font-bold text-4xl">{frontmatter.title}</h1>
   <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
-  <div class="tags">
+  <div class="tags flex flex-wrap">
     {
       frontmatter.tags.map((tag: string) => (
-        <p class="tag">
+        <p class="tag p-2 m-1 rounded-lg bg-sky-400/20 hover:bg-sky-700/35">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
     }
   </div>
-  <slot />
+  <div
+    class="prose max-w-full sm:max-w-prose mx-auto text-pretty"
+  >
+    <slot />
+  </div>
 </BaseLayout>
-
-<style>
-  a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  }
-
-  img {
-    max-width: 80%;
-  }
-</style>
