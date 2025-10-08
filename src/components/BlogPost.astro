@@ -6,7 +6,7 @@ const images = import.meta.glob<{default: ImageMetadata}>('/src/pages/posts/imag
 ---
    
 <a href={post.url}>
-    <article class="blog-post flex flex-col my-5 bg-white rounded-xl w-2xl max-2xl:w-auto">
+    <article class="blog-post flex flex-col my-5 bg-white rounded-xl w-2xl max-2xl:w-auto shadow-lg">
         {post.frontmatter.cover && (
             <div class="border-b border-gray-200">
                 <Image 
@@ -16,7 +16,7 @@ const images = import.meta.glob<{default: ImageMetadata}>('/src/pages/posts/imag
                 />
             </div>
         )}
-        <h1 class="text-xl font-bold p-3">{post.frontmatter.title}</h1>
+        <h1 class="text-xl font-semibold p-3">{post.frontmatter.title}</h1>
         <p class="px-3">{post.frontmatter.description}</p>
         <div class="flex flex-row p-3 text-xs text-gray-500">
             <p class="flex-1">发布于{post.frontmatter.pubDate.toString().slice(0,10)}</p>

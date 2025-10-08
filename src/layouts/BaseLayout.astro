@@ -1,26 +1,23 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import SideBar from "../components/SideBar.astro";
 import "../styles/global.css";
+import favicon from "../images/favicon.png";
 const { pageTitle } = Astro.props;
 ---
 
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
   <body>
     <Header />
-    <div class="main flex flex-wrap justify-center">
-      <div class="sidebar m-1 p-3">
-        <SideBar />
-      </div>
-      <div class="post-page m-1 p-3 max-w-full lg:max-w-5xl text-wrap overflow-hidden">
+    <div class="main flex justify-center pt-18">
+      <div class="post-page p-3 text-wrap overflow-hidden">
         <slot />
       </div>
     </div>
