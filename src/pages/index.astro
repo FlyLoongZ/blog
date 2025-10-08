@@ -10,12 +10,7 @@ const allPosts = Object.values(
 <BaseLayout pageTitle={pageTitle}>
     {
         allPosts.map((post: any) => (
-            <BlogPost
-                url={post.url}
-                title={post.frontmatter.title}
-                description={post.frontmatter.description}
-                cover={post.frontmatter.cover}
-            />
+            <BlogPost post={post}/>
         ))
     }
 </BaseLayout>

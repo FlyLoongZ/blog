@@ -5,7 +5,6 @@ pubDate: 2024-04-15
 description: '在玩客云上安装armbian'
 author: 'FlyLoongZ'
 tags: ["armbian", "linux"]
-cover: /src/pages/posts/images/armbian.png
 ---
 
 ## 准备工作
