@@ -16,9 +16,19 @@ const { frontmatter } = Astro.props;
       ))
     }
   </div>
-  <div
-    class="prose max-w-full sm:max-w-prose mx-auto text-pretty"
-  >
+  <div class="
+          prose 
+          max-w-full 
+          sm:max-w-prose 
+          mx-auto 
+          text-pretty 
+          prose-inline-code:rounded-lg
+          prose-inline-code:bg-gray-200
+          prose-inline-code:px-2
+          prose-inline-code:py-1
+          prose-code:before:hidden 
+          prose-code:after:hidden">
     <slot />
   </div>
 </BaseLayout>
+
