@@ -9,7 +9,6 @@ const lastModified = dayjs(Astro.props.frontmatter.lastModified).format("YYYY-MM
 <BaseLayout pageTitle={frontmatter.title}>
   <h1 class="font-bold text-4xl mb-3">{frontmatter.title}</h1>
   <p class="text-sm text-gray-500 mb-3">发布于: {frontmatter.pubDate.toString().slice(0, 10)}，更新于: {lastModified}</p>
-  <p><em>{frontmatter.description}</em></p>
   <div class="tags flex flex-wrap my-3">
     {
       frontmatter.tags.map((tag: string) => (
@@ -19,12 +18,9 @@ const lastModified = dayjs(Astro.props.frontmatter.lastModified).format("YYYY-MM
       ))
     }
   </div>
+  <p class="mb-5">{frontmatter.description}</p>
   <div class="
-          prose 
-          max-w-full 
-          sm:max-w-prose 
-          mx-auto 
-          text-pretty 
+          prose  
           prose-inline-code:rounded-lg
           prose-inline-code:bg-gray-200
           prose-inline-code:px-2
