@@ -5,7 +5,7 @@ pubDate: 2025-09-02
 description: '我的SukiSU Ultra内核编译记录'
 author: 'FlyLoongZ'
 tags: ["Android", "Kernel", "KernelSU"]
-cover: /src/pages/posts/images/SukiSU-mini.svg
+cover: /src/images/SukiSU-mini.svg
 ---
 > 编译的内核使用在`Redmi Note 12 Tubro`上，仅供参考
   
@@ -97,17 +97,17 @@ make ARCH=arm64 menuconfig
 ```
 - 按`/`键进入搜索内核配置界面
 - 输入`CONFIG_KSU_MANUAL_HOOK`
-![搜索页面](images/kernel_config_tui_search.png)
+![搜索页面](../../images/kernel_config_tui_search.png)
 - 按`确认键`来到下图界面
-![搜索结果](images/kernel_config_tui_search_results.png)
+![搜索结果](../../images/kernel_config_tui_search_results.png)
 - 按`1`来到对应配置设置
-![配置设置](images/kernel_config_tui_set.png)
+![配置设置](../../images/kernel_config_tui_set.png)
 - 按`确认键`进入修改配置界面
 - 使用`方向键`移动到对应选项，按`确认键`修改配置
-![修改配置](images/kernel_config_tui_edit.png)
+![修改配置](../../images/kernel_config_tui_edit.png)
 - 按`/`搜索`CONFIG_KSU_SUSFS_SUS_SU`
 - 按`空格`修改`CONFIG_KSU_SUSFS_SUS_SU`为禁用
-![修改配置](images/kernel_config_tui_disable.png)
+![修改配置](../../images/kernel_config_tui_disable.png)
 - 最后使用`方向键`移动到`<save>`保存修改
 - 使用`Ctrl + C`退出tui
 - 运行`make ARCH=arm64 savedefconfig`得到`defconfg`文件
@@ -116,7 +116,7 @@ make ARCH=arm64 menuconfig
 #### 1.5.2 保存配置
 - 使用`Meld`工具比较`defconfig`和`arch/arm64/configs/gki_defconfig`
 - 找到上面修改的配置，点击gui上的箭头插入修改到`gki_defconfig`，然后保存修改
-![Meld](images/config_meld.png)
+![Meld](../../images/config_meld.png)
 
 ## 2. 编译内核
 ``` bash

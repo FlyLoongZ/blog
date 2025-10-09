@@ -21,11 +21,11 @@ tags: ["armbian", "linux"]
 - 双公头USB数据线，一头插靠近HDMI接口USB，一头电脑USB
 - 短接刷机点通电到3%再松手，直到刷机完成
 短接图：
-![v1.1短接图](images/Pasted%20image%2020240415190906.png)
+![v1.1短接图](../../images/Pasted%20image%2020240415190906.png)
 v1.1短接图（sd 卡槽空白）
-![v1.3短接图](images/Pasted%20image%2020240415190930.png)
+![v1.3短接图](../../images/Pasted%20image%2020240415190930.png)
 v1.3短接图（卡槽带版本）
-![v1.3短接图](images/Pasted%20image%2020240415190958.png)
+![v1.3短接图](../../images/Pasted%20image%2020240415190958.png)
 放大图
 >参考[玩客云刷Debian小白保姆级教程AllinOne](https://www.right.com.cn/forum/thread-8344722-1-1.html)，[玩客云刷机短接图](https://www.bilibili.com/read/cv21738633/)
 ## 配置

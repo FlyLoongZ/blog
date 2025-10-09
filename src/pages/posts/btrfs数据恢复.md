@@ -5,7 +5,7 @@ pubDate: 2025-10-08
 description: '最近一块用于bt下载的hdd硬盘突然挂了，经过多次尝试终于恢复成功，于是记录一下数据恢复的过程'
 author: 'FlyLoongZ'
 tags: ["btrfs", "hdd", "linux"]
-cover: /src/pages/posts/images/Btrfs_logo.svg
+cover: /src/images/Btrfs_logo.svg
 ---
 
 ## 目录

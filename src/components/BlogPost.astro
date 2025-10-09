@@ -2,7 +2,7 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 const { post } = Astro.props;
-const images = import.meta.glob<{default: ImageMetadata}>('/src/pages/posts/images/*.*');
+const images = import.meta.glob<{default: ImageMetadata}>('/src/images/*.*');
 ---
    
 <a href={post.url}>
