@@ -23,6 +23,7 @@ cover: /src/pages/posts/images/SukiSU-mini.svg
     - [1.5.2 保存配置](#152-保存配置)
 - [2. 编译内核](#2-编译内核)
 - [3. 打包内核](#3-打包内核)
+- [参考](#参考)
 
 
 ## 1. 编译前准备
@@ -141,3 +142,7 @@ PATCH_VBMETA_FLAG=auto;
 # 在AnyKenrnel3根目录运行，也可以手动打包（排除.git, .github, README.md文件）
 zip -r9 UPDATE-AnyKernel3.zip * -x .git README.md 
 ```
+
+## 参考
+- [Sukisu Ultra 集成指导](https://github.com/SukiSU-Ultra/SukiSU-Ultra/blob/main/docs/zh/guide/how-to-integrate.md)
+- [Action_OnePlus_MKSU_SUSFS](https://github.com/ShirkNeko/Action_OnePlus_MKSU_SUSFS)

@@ -8,8 +8,6 @@ tags: ["btrfs", "hdd", "linux"]
 cover: /src/pages/posts/images/Btrfs_logo.svg
 ---
 
-> 硬盘挂了应该首先尝试只读挂载备份数据，btrfs分区可以使用btrfs restore导出数据。无法挂载也要使用ddrescue备份硬盘数据再进行修复，在不稳定的硬盘上修复可能导致硬盘数据永远消失。
-
 ## 目录
 - [目录](#目录)
 - [故障出现](#故障出现)
