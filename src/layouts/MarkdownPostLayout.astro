@@ -1,16 +1,19 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import dayjs from "dayjs";
 const { frontmatter } = Astro.props;
+
+const lastModified = dayjs(Astro.props.frontmatter.lastModified).format("YYYY-MM-DD");
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <h1 class="font-bold text-4xl">{frontmatter.title}</h1>
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <h1 class="font-bold text-4xl mb-3">{frontmatter.title}</h1>
+  <p class="text-sm text-gray-500 mb-3">发布于: {frontmatter.pubDate.toString().slice(0, 10)}，更新于: {lastModified}</p>
   <p><em>{frontmatter.description}</em></p>
-  <div class="tags flex flex-wrap">
+  <div class="tags flex flex-wrap my-3">
     {
       frontmatter.tags.map((tag: string) => (
-        <p class="tag p-2 m-1 rounded-lg bg-sky-400/20 hover:bg-sky-700/35">
+        <p class="tag p-1 m-1 rounded-lg bg-sky-400/20 hover:bg-sky-700/35">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
