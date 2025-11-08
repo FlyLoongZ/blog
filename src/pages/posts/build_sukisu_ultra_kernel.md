@@ -75,17 +75,17 @@ curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kern
 ``` bash
 git clone https://gitlab.com/simonpunk/susfs4ksu.git -b gki-android12-5.10
 ```
-- 下载来自[SukiSU_patch](https://github.com/SukiSU-Ultra/SukiSU_patch)的补丁`69_hide_stuff.patch`和`hooks/syscall_hooks.patch`
+- 下载来自[SukiSU_patch](https://github.com/SukiSU-Ultra/SukiSU_patch)的补丁`69_hide_stuff.patch`和`hooks/scope_min_manual_hooks_v1.6.patch`
 > `69_hide_stuff.patch` 用于隐藏类原生信息和隐藏zygote修改，
-`syscall_hooks.patch`用于启用SukiSU-Ultra的Manual hook功能
+`scope_min_manual_hooks_v1.6.patch`用于启用SukiSU-Ultra的Manual hook功能
 #### 1.4.2 安装补丁
 - 进入`susfsksu`的`kernel_patches`目录，将目录下对应目录文件复制到`common`对应目录，由于我们使用的是`SukiSU Ultra`的`susfs`分支所以不用复制`KernelSU`文件夹内补丁
-- 将之前下载的`69_hide_stuff.patch`和`syscall_hooks.patch`复制到common目录
+- 将之前下载的`69_hide_stuff.patch`和`scope_min_manual_hooks_v1.6.patch`复制到common目录
 ``` bash
 # 在common目录
 patch -p1 < 50_add_susfs_in_gki-android12-5.10.patch
 patch -p1 < 69_hide_stuff.patch
-patch -p1 < syscall_hooks.patch
+patch -p1 < scope_min_manual_hooks_v1.6.patch
 ```
 
 ### 1.5 修改内核配置
